@@ -3,19 +3,19 @@ self.addEventListener('push', function (evt) {
 
   console.log('Received a push message', event);
 
-  // THis didn't really work
-  // var title = 'Yay a message.';
-  // var body = 'We have received a push message.';
-  // var icon = '/images/icon-192x192.png';
-  // var tag = 'simple-push-demo-notification-tag';
+//  THis didn't really work
+  var title = 'Yay a message.';
+  var body = 'We have received a push message.';
+  var icon = '/images/icon-192x192.png';
+  var tag = 'simple-push-demo-notification-tag';
 
-  // event.waitUntil(
-  //   self.registration.showNotification(title, {
-  //     body: body,
-  //     icon: icon,
-  //     tag: tag
-  //   })
-  // );
+  event.waitUntil(
+    self.registration.showNotification(title, {
+      body: body,
+      icon: icon,
+      tag: tag
+    })
+  );
 });
 
 // The SW will be shutdown when not in use to save memory,
